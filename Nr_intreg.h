@@ -15,9 +15,9 @@ class nr_intreg: public nr_natural
         bool operator== (const nr_intreg &);
         bool operator< (const nr_intreg &);
         bool operator> (const nr_intreg &);
-        nr_intreg operator+ (nr_intreg );
-        nr_intreg operator- (nr_intreg );
-        nr_intreg operator* (nr_intreg );
+        nr_intreg operator+ (nr_intreg &);
+        nr_intreg operator- (nr_intreg &);
+        nr_intreg operator* (nr_intreg &);
         void citire(std::istream &);
         void scrie(std::ostream &) const;
 };

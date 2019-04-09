@@ -58,5 +58,19 @@ int main()
     Quicksort(v,0,n-1);
     for(i=0;i<n;i++)
         g<<v[i]<<" ";
+    nr_intreg x,y;
+    f>>x>>y;
+    g<<endl;
+    g<<x<<"+"<<y<<"="<<x+y<<endl;
+    g<<x<<"-"<<y<<"="<<x-y<<endl;
+    g<<x<<"*"<<y<<"="<<x*y<<endl;
+    lista<int> lis;
+    lis.adauga_in(1);
+    lis.adauga_in(1);
+    lis.adauga_in(2);
+    lis.adauga_in(3);
+    cout<<lis.frecventa(1);
+    f.close();
+    g.close();
     return 0;
 }

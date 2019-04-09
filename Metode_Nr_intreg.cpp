@@ -142,7 +142,7 @@ void nr_intreg::scrie(std::ostream &out) const
     }
 }
 
-nr_intreg nr_intreg::operator+ (nr_intreg b)
+nr_intreg nr_intreg::operator+ (nr_intreg &b)
 {
     nr_intreg sum;
     nr_natural *a = &(*this), *b1 = &b;
@@ -163,7 +163,7 @@ nr_intreg nr_intreg::operator+ (nr_intreg b)
     return sum;
 }
 
-nr_intreg nr_intreg::operator-(nr_intreg b)
+nr_intreg nr_intreg::operator-(nr_intreg &b)
 {
     nr_intreg dif;
     nr_natural *a = &(*this), *b1 = &b;
@@ -185,7 +185,7 @@ nr_intreg nr_intreg::operator-(nr_intreg b)
     return dif;
 }
 
-nr_intreg nr_intreg::operator*(nr_intreg b)
+nr_intreg nr_intreg::operator*(nr_intreg &b)
 {
     nr_intreg prod;
     nr_natural *a = &(*this), *b1 = &b;

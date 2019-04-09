@@ -26,6 +26,7 @@ template <class T> class lista
     void adauga_in(T );
     void adauga_sf(T );
     void sterge_lista();
+    int frecventa(T );
     template <typename N>
     friend std::istream & operator>>(std::istream &,lista<N> &);
     template <typename N>
@@ -144,5 +145,18 @@ std::ostream & operator<<(std::ostream &out,const lista<T> &lis)
     return out;
 }
 
+template <class T>
+int lista<T>::frecventa(T elem)
+{
+    int nr = 0;
+    nod<T> *p = this->start;
+    while(p!=NULL)
+    {
+        if(elem == p->key)
+            nr++;
+        p = p->next;
+    }
+    return nr;
+}
 
 #endif // LISTA_H_INCLUDED
